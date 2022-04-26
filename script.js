@@ -9,7 +9,7 @@ const operatorsFunctions = {
   "*": (a, b) => a * b,
   "/": (a, b) => a / b,
   "-": (a, b) => a - b,
-  "+": (a, b) => a + b,
+  "+": (a, b) => +a + +b,
 };
 
 //          ['+','-', '*', '/']
