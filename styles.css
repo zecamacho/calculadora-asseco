@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Myriad Pro", sans-serif;
+}
+
+:root {
+  /* pallete */
+  --operation-color: rgba(253, 158, 42, 1);
+  --operation-color-active: rgba(173, 109, 31, 1);
+  --numbers-color: rgba(115, 120, 125, 0.9);
+  --numbers-color-active: rgba(151, 156, 161, 0.9);
+  --ac-color: rgba(96, 99, 102, 0.8);
+  --ac-color-active: rgba(96, 99, 102, 1);
+  --font-color: #e9e7ec;
+  --bg-color: rgba(255, 255, 255, 0.24);
+
+  --white: #fff;
+
+  /* tamanhos de letra */
+  --font-big: 2rem;
+  --font-biggest: 4rem;
+}
+
+.container {
+  background-image: url("/bg.jpg");
+  background-size: cover;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar */
+.navbar {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.circle {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.circle-red {
+  background-color: #fa605c;
+}
+
+.circle-yellow {
+  background-color: #fcba40;
+}
+
+.circle-green {
+  background-color: #33c649;
+}
+
+
+/* ------------------------------------ - ----------------------------------- */
+
+.content {
+  min-width: min(20vw, 200px);
+  min-height: 35vh;
+  display: grid;
+  gap: 1px;
+  grid-template-rows: min-content 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--bg-color);
+}
+
+.visor {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: var(--font-biggest);
+  color: var(--font-color);
+  grid-column: span 4;
+}
+
+.button {
+  font-size: var(--font-big);
+  color: var(--font-color);
+  min-width: 70px;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Operation */
+
+.button.operation {
+  background-color: var(--operation-color);
+}
+
+.button.operation:active {
+  background-color: var(--operation-color-active);
+}
+
+/* Number */
+.button.number {
+  background-color: var(--numbers-color);
+}
+.button.number:active {
+  background-color: var(--numbers-color-active);
+}
+
+/* Extra Operation */
+.button.extra-operation {
+  background-color: var(--ac-color);
+}
+.button.extra-operation:active {
+  background-color: var(--ac-color-active);
+}
+
+.zero {
+  grid-column: 1/3;
+}
